@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
 
   s.dependency "React"
-  s.dependenct "BCryptSwift", "~> 1.1"
+  s.dependency "BCryptSwift", "~> 1.1"
   #s.dependency "others"
 
 end

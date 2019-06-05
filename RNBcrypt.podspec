@@ -3,10 +3,8 @@ Pod::Spec.new do |s|
   s.name         = "RNBcrypt"
   s.version      = "1.0.0"
   s.summary      = "RNBcrypt"
-  s.description  = <<-DESC
-                  RNBcrypt
-                   DESC
-  s.homepage     = ""
+  s.description  = "Native module for React Native that verifies a BCrypt hashed password"
+  s.homepage     = "https://github.com/abouariu-clarisoft/RNBcrypt.git"
   s.license      = "MIT"
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
   s.author             = { "author" => "andrei.bouariu@clarisoft.com" }

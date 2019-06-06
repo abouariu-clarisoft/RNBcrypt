@@ -14,7 +14,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
 
-  s.dependency "React", "~> 16.3.1"
   s.dependency "BCryptSwift", "~> 1.1"
   #s.dependency "others"
 

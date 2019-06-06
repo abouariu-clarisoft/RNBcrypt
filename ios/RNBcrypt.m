@@ -1,6 +1,8 @@
 
 #import "RNBcrypt.h"
 
+#import <BCryptSwift/BCryptSwift-Swift.h>
+
 @implementation RNBcrypt
 
 - (dispatch_queue_t)methodQueue
@@ -9,9 +11,16 @@
 }
 RCT_EXPORT_MODULE()
 
-RCT_EXPORT_METHOD(verifyPassword:(NSString *)password hash:(NSString *)hash)
+RCT_EXPORT_METHOD(verifyPassword: (NSString *)password
+                  hash: (NSString *)hash
+                  resolver: (RCTPromiseResolveBlock)resolve
+                  rejecter: (RCTPromiseRejectBlock)reject)
 {
-    RCTLogInfo(@"Pretending to create an event %@ at %@", name, location);
+    if ([BCryptSwift verifyPassword:password matchesHash: hash]) {
+        resolve();
+    } else {
+        reject();
+    }
 }
 
 @end

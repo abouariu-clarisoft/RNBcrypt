@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.author             = { "author" => "andrei.bouariu@clarisoft.com" }
   s.platform     = :ios, "7.0"
   s.source       = { :git => "https://github.com/abouariu-clarisoft/RNBcrypt.git", :tag => "master" }
-  s.source_files  = "RNBcrypt/**/*.{h,m}"
+  s.source_files  = "ios/**/*.{h,m}"
   s.requires_arc = true
 
 

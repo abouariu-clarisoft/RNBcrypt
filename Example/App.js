@@ -7,7 +7,16 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {Platform, StyleSheet, Text, View, NativeModules} from 'react-native';
+
+let RNBcrypt = NativeModules.RNBcrypt;
+RNBcrypt.verifyPassword('test', '$2y$10$./067zeJA/quB69AmSmsg.7X9UnqHltWjdSG9tIfQaQEiDrXdjrGW')
+  .then(() => {
+    console.log('Verification successful');
+  })
+  .catch(() => {
+    console.log('Verification failed');
+  });
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',

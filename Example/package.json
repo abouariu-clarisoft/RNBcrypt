@@ -9,7 +9,7 @@
   "dependencies": {
     "react": "16.8.3",
     "react-native": "0.59.8",
-    "react-native-bcrypt": "git+https://github.com/abouariu-clarisoft/RNBcrypt.git"
+    "react-native-bcrypt": "file:../"
   },
   "devDependencies": {
     "@babel/core": "7.4.5",

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		67396CBA22B0274C0002900C /* BCryptSwiftRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67396CB822B0274C0002900C /* BCryptSwiftRandom.swift */; };
+		67396CBB22B0274C0002900C /* BCryptSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67396CB922B0274C0002900C /* BCryptSwift.swift */; };
 		B3E7B58A1CC2AC0600A0062D /* RNBcrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNBcrypt.m */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +26,9 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libRNBcrypt.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNBcrypt.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		67396CB722B0274C0002900C /* RNBcrypt-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNBcrypt-Bridging-Header.h"; sourceTree = "<group>"; };
+		67396CB822B0274C0002900C /* BCryptSwiftRandom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCryptSwiftRandom.swift; sourceTree = "<group>"; };
+		67396CB922B0274C0002900C /* BCryptSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCryptSwift.swift; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* RNBcrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNBcrypt.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RNBcrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNBcrypt.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -50,9 +55,12 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				67396CB922B0274C0002900C /* BCryptSwift.swift */,
+				67396CB822B0274C0002900C /* BCryptSwiftRandom.swift */,
 				B3E7B5881CC2AC0600A0062D /* RNBcrypt.h */,
 				B3E7B5891CC2AC0600A0062D /* RNBcrypt.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
+				67396CB722B0274C0002900C /* RNBcrypt-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +95,7 @@
 				TargetAttributes = {
 					58B511DA1A9E6C8500147676 = {
 						CreatedOnToolsVersion = 6.1.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -95,6 +104,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 58B511D21A9E6C8500147676;
@@ -112,6 +122,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67396CBB22B0274C0002900C /* BCryptSwift.swift in Sources */,
+				67396CBA22B0274C0002900C /* BCryptSwiftRandom.swift in Sources */,
 				B3E7B58A1CC2AC0600A0062D /* RNBcrypt.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,32 +215,41 @@
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				HEADER_SEARCH_PATHS = (
-				"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(SRCROOT)/../../../React/**",
-					"$(SRCROOT)/../../react-native/React/**",
-				);
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = RNBcrypt;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		58B511F11A9E6C8500147676 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
 				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RNBcrypt;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RNBcrypt-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		58B511F11A9E6C8500147676 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../../React/**",
+					"$(SRCROOT)/../../react-native/React/**",
+				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = RNBcrypt;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RNBcrypt-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

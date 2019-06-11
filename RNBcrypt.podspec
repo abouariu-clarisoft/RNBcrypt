@@ -10,13 +10,11 @@ Pod::Spec.new do |s|
   s.author             = { "author" => "andrei.bouariu@clarisoft.com" }
   s.platform     = :ios, "9.0"
   s.source       = { :git => "https://github.com/abouariu-clarisoft/RNBcrypt.git", :tag => "master" }
-  s.source_files  = "ios/**/*.{h,m,swift}"
+  s.source_files  = "ios/**/*.{h,m}"
   s.requires_arc = true
 
-  s.preserve_path = "${POD_ROOT}/RNBcrypt/RNBcrypt-BridgingHeader.h"
-  s.xcconfig = { 'SWIFT_OBJC_BRIDGING_HEADER' => '${POD_ROOT}/RNBcrypt/RNBcrypt-BridgingHeader.h' }
-
   s.dependency "React"
+  s.dependency "BCryptSwift", "~> 1.1"
   #s.dependency "others"
 
 end

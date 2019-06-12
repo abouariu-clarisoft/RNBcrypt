@@ -374,7 +374,7 @@
     
     NSInteger range = daysFromNow + daysAgo;
     
-    NSDateComponents *startDay = [[[NSDateComponents alloc] init] autorelease];
+    NSDateComponents *startDay = [[NSDateComponents alloc] init];
     startDay.day = -daysAgo;
     
     NSCalendar *calendar = [NSCalendar currentCalendar];
@@ -384,7 +384,7 @@
                                      toDate: date
                                     options: 0];
     
-    NSDateComponents *offsetDays = [[[NSDateComponents alloc] init] autorelease];
+    NSDateComponents *offsetDays = [[NSDateComponents alloc] init];
     offsetDays.day = arc4random() % range;
     
     date = [calendar dateByAddingComponents: offsetDays

@@ -1,7 +1,7 @@
 
 #import "RNBcrypt.h"
 
-#import <BCryptSwift/BCryptSwift-Swift.h>
+#import "JFBCrypt.h"
 
 @implementation RNBcrypt
 
@@ -16,10 +16,10 @@ RCT_EXPORT_METHOD(verifyPassword: (NSString *)password
                   resolver: (RCTPromiseResolveBlock)resolve
                   rejecter: (RCTPromiseRejectBlock)reject)
 {
-    if ([BCryptSwift verifyPassword:password matchesHash: hash]) {
-        resolve();
+    if ([JFBCrypt checkPassword:password withHash:hash]) {
+        resolve(@YES);
     } else {
-        reject();
+        reject(@"0", @"Failed to validate password", [NSError errorWithDomain:@"bcrypt" code:0 userInfo:nil]);
     }
 }
 

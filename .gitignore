@@ -28,7 +28,8 @@ DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
-project.xcworkspace
+*.xcworkspace
+Example/ios/Podfile.lock
       
 
 # Android/IntelliJ

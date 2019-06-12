@@ -10,11 +10,10 @@ Pod::Spec.new do |s|
   s.author             = { "author" => "andrei.bouariu@clarisoft.com" }
   s.platform     = :ios, "9.0"
   s.source       = { :git => "https://github.com/abouariu-clarisoft/RNBcrypt.git", :tag => "master" }
-  s.source_files  = "ios/**/*.{h,m}"
+  s.source_files  = "ios/**/*.{h,m,swift}"
   s.requires_arc = true
 
   s.dependency "React"
-  s.dependency "BCryptSwift", "~> 1.1"
   #s.dependency "others"
 
 end

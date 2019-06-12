@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		67396CBA22B0274C0002900C /* BCryptSwiftRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67396CB822B0274C0002900C /* BCryptSwiftRandom.swift */; };
-		67396CBB22B0274C0002900C /* BCryptSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67396CB922B0274C0002900C /* BCryptSwift.swift */; };
+		67396DAD22B10E9E0002900C /* JFRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 67396DAB22B10E9D0002900C /* JFRandom.m */; };
+		67396DAE22B10E9E0002900C /* JFBCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 67396DAC22B10E9E0002900C /* JFBCrypt.m */; };
 		B3E7B58A1CC2AC0600A0062D /* RNBcrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNBcrypt.m */; };
 /* End PBXBuildFile section */
 
@@ -27,8 +27,11 @@
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libRNBcrypt.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNBcrypt.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		67396CB722B0274C0002900C /* RNBcrypt-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNBcrypt-Bridging-Header.h"; sourceTree = "<group>"; };
-		67396CB822B0274C0002900C /* BCryptSwiftRandom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCryptSwiftRandom.swift; sourceTree = "<group>"; };
-		67396CB922B0274C0002900C /* BCryptSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCryptSwift.swift; sourceTree = "<group>"; };
+		67396DA822B10E9D0002900C /* JFBCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFBCrypt.h; sourceTree = "<group>"; };
+		67396DA922B10E9D0002900C /* JFRandom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFRandom.h; sourceTree = "<group>"; };
+		67396DAA22B10E9D0002900C /* JFGC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFGC.h; sourceTree = "<group>"; };
+		67396DAB22B10E9D0002900C /* JFRandom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFRandom.m; sourceTree = "<group>"; };
+		67396DAC22B10E9E0002900C /* JFBCrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFBCrypt.m; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* RNBcrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNBcrypt.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RNBcrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNBcrypt.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -55,8 +58,11 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-				67396CB922B0274C0002900C /* BCryptSwift.swift */,
-				67396CB822B0274C0002900C /* BCryptSwiftRandom.swift */,
+				67396DA822B10E9D0002900C /* JFBCrypt.h */,
+				67396DAC22B10E9E0002900C /* JFBCrypt.m */,
+				67396DAA22B10E9D0002900C /* JFGC.h */,
+				67396DA922B10E9D0002900C /* JFRandom.h */,
+				67396DAB22B10E9D0002900C /* JFRandom.m */,
 				B3E7B5881CC2AC0600A0062D /* RNBcrypt.h */,
 				B3E7B5891CC2AC0600A0062D /* RNBcrypt.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
@@ -122,9 +128,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67396CBB22B0274C0002900C /* BCryptSwift.swift in Sources */,
-				67396CBA22B0274C0002900C /* BCryptSwiftRandom.swift in Sources */,
+				67396DAD22B10E9E0002900C /* JFRandom.m in Sources */,
 				B3E7B58A1CC2AC0600A0062D /* RNBcrypt.m in Sources */,
+				67396DAE22B10E9E0002900C /* JFBCrypt.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
